@@ -1,0 +1,14 @@
+NOTICE.txt
+
+.:
+LICENSE.txt
+NOTICE.txt
+babynames
+basic
+copyspecial
+hello.py
+logpuzzle
+temp.py
+tmp.txt
+utility.py
+utility1.py

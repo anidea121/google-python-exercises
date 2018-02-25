@@ -1,0 +1,5 @@
+copyspecial.py
+solution
+tmp.txt
+xyz__hello__.txt
+zz__something__.jpg

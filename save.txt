@@ -1,0 +1,5 @@
+Command to run: ls t*
+ls t*
+temp.py
+tmp.txt
+
