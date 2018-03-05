@@ -48,7 +48,7 @@ def extract_names(filename):
   global name
   global year
   global dict1
-  
+
   #Finding year
   for line in filename:
     match = re.search('Popularity in \d\d\d\d', line)
@@ -56,7 +56,7 @@ def extract_names(filename):
       list1 = re.search('\d\d\d\d', match.group())
       break
   year = list1.group()
-  
+
   #Finding names and rank
   string2 = []
   string3 = []
@@ -78,7 +78,7 @@ def extract_names(filename):
 
       #Store the items of list in dictionary - data structure.
       dict1[list2[1]] = list2[0]
-      dict1[list2[2]] = list2[0]  
+      dict1[list2[2]] = list2[0]
 
   return dict1
 
@@ -87,10 +87,10 @@ def main():
   # This command-line parsing code is provided.
   # Make a list of command line arguments, omitting the [0] element
   # which is the script itself.
-  
+
 
   args = sys.argv[1:]
-  
+
   if not args:
     print 'usage: [--summaryfile] file [file ...]'
     sys.exit(1)
@@ -119,7 +119,7 @@ def main():
     f = open(opname, 'w')
     f.write(year + '\n')
 
-    #Print in sorted order  
+    #Print in sorted order
     for key in keys:
       #print "%s %s" %(key, dict1[key])
       f.write("%s %s\n" %(key, dict1[key]))
@@ -133,6 +133,6 @@ def main():
   # +++your code here+++
   # For each filename, get the names, then either print the text output
   # or write it to a summary file
-  
+
 if __name__ == '__main__':
   main()

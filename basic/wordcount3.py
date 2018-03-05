@@ -59,7 +59,6 @@ def read_file(filename):
         dict1[words] = 1
   f.close()
   return dict1
-      
 
 def print_words (filename):
   dict2 = read_file(filename)
@@ -67,7 +66,7 @@ def print_words (filename):
   keylist.sort()
   for key in keylist:
     print "%s %d" %(key, dict2[key])
-  
+
 def MyFunc (tuple):
   return tuple[1]
 
@@ -75,17 +74,20 @@ def print_top (filename):
   dict2 = read_file(filename)
 
   dict3 = sorted(dict2.items(), key = MyFunc, reverse = True)
+  f1 = open('summary.txt','w')
   for num in dict3[:20]:
-    print num[0], num[1]
+      write_line = str(num[0]) + ' , ' + str(num[1]) + '\n'
+      f1.write(write_line)
+      print num[0], num[1]
 
+  f1.close()
 ###
 
 # This basic command line argument parsing code is provided and
 # calls the print_words() and print_top() functions which you must define.
 
-
 def main():
-  
+
   if len(sys.argv) != 3:
     print 'usage: ./wordcount.py {--count | --topcount} file'
     sys.exit(1)
